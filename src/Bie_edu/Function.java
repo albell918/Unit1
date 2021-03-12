@@ -13,6 +13,7 @@ package Bie_edu;
 class Function {
 
     // Define the function to integrate
+
     double f(double x) {
         return Math.sin(x);
     }
@@ -47,7 +48,7 @@ class Function {
 }
 
 
-class integration {
+class Integration {
 
     // Class result: calculates the integral and displays the result.
     public static void main(String[] args) {
