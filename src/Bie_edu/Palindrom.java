@@ -28,22 +28,16 @@ public class Palindrom {
 
     // use StringBuilder
     public static boolean isPalindrom2(String text) {
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
-        // remove garbage
+        text = text.replaceAll("[^A-Za-zА-Яа-я]",""); // remove garbage
         text = text.toLowerCase();
-        boolean result = true;
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = text.length() - 1; i >= 0; i--) {
-            sb.append(text.charAt(i));
-        }
-
-        String newText = sb.toString();
-
-        if (!text.equals(newText)) {
+        StringBuilder sb = new StringBuilder(text);
+        String reversed = sb.reverse().toString();
+        boolean result;
+        if (text.equals(reversed)) {
+            result = true;
+        }else {
             result = false;
         }
-
         return result;
     }
 
